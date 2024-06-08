@@ -1,5 +1,5 @@
-cd ~/Downloads
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo apt install -y ./google-chrome-stable_current_amd64.deb
-rm google-chrome-stable_current_amd64.deb
-cd -
+curl -Lo "/tmp/Google Chrome.dmg" https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg;
+hdiutil attach "/tmp/Google Chrome.dmg";
+ditto -rsrc "/Volumes/Google Chrome/Google Chrome.app" "/Applications/Google Chrome.app";
+hdiutil detach "/Volumes/Google Chrome";
+rm "/tmp/Google Chrome.dmg";
